@@ -9,10 +9,13 @@ project(planning
 set(CMAKE_CXX_STANDARD 17)
 
 #变量和目录设置
+#将生成的可执行文件（planning_main.exe）和动态库（pnc_map和process）
+#放在项目根目录(CMAKE_PLANNING_DEMO)下的bin文件夹中
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)#动态库和exe文件都指定到bin目录下面
+#定义变量：Process_Dir指向项目根目录下的src/process目录，PNC_Map_Dir指向项目根目录下的src/pnc_map目录。
 set(Process_Dir ${CMAKE_SOURCE_DIR}/src/process)
 set(PNC_Map_Dir ${CMAKE_SOURCE_DIR}/src/pnc_map)
 #添加子目录
-add_subdirectory(src)
+add_subdirectory(src)#告诉CMake在src子目录中查找CMakeLists.txt文件，并编译其中的代码。
 
 
