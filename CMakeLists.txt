@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.29.0)
 project(planning
     VERSION 0.0.1
-    DESCRIPTION"a demo of cmake planning"
+    DESCRIPTION "a demo of cmake planning"
     HOMEPAGE_URL "https://github.com/Alan-Yao-666/cmake_planning_demo"
     LANGUAGES CXX
 )
