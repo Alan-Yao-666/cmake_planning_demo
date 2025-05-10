@@ -3,6 +3,7 @@ project(planning_main)#定义了当前CMake项目的名称为planning_main
 #告诉CMake在以下2个子目录中查找CMakeLists.txt文件，并编译其中的代码。
 add_subdirectory(pnc_map)
 add_subdirectory(process)
+add_subdirectory(show_result)
 
 #创建了一个名为{PROJECT_NAME}的可执行文件。
 #${PROJECT_NAME}在前面被定义为planning_main，
@@ -19,9 +20,19 @@ PUBLIC
 ${Process_Dir}
 )
 
+target_include_directories(${PROJECT_NAME}
+PUBLIC
+${Show_Result_Dir}
+)
+
 #将process库链接到planning_main可执行文件
-#将process库链接到planning_main可执行文件
+
 target_link_libraries(${PROJECT_NAME}
 PUBLIC
 process
+)
+
+target_link_libraries(${PROJECT_NAME}
+PUBLIC
+show_result
 )
