@@ -1,6 +1,6 @@
 project(planning_main)#定义了当前CMake项目的名称为planning_main
 
-#告诉CMake在以下2个子目录中查找CMakeLists.txt文件，并编译其中的代码。
+#告诉CMake在以下3个子目录中查找CMakeLists.txt文件，并编译其中的代码。
 add_subdirectory(pnc_map)
 add_subdirectory(process)
 add_subdirectory(show_result)

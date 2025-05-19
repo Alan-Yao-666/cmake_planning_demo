@@ -8,17 +8,17 @@ SHARED
 show_result.cpp
 )
 
-#将src/pnc_map目录作为头文件的搜索路径添加到process库中
-target_include_directories(${PROJECT_NAME}
-PUBLIC
-${Process_Dir}
-)
+# #将src/process目录作为头文件的搜索路径添加到show_result库中
+# target_include_directories(${PROJECT_NAME}
+# PUBLIC
+# ${Process_Dir}
+# )
 
-#将pnc_map库链接到process库
-target_link_libraries(${PROJECT_NAME}
-PUBLIC
-process
-)
+#将process库链接到show_result库
+# target_link_libraries(${PROJECT_NAME}
+# PUBLIC
+# process
+# )
 
 target_link_libraries(${PROJECT_NAME}
 PUBLIC
