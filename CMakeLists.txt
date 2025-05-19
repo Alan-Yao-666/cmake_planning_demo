@@ -19,7 +19,8 @@ set(PNC_Map_Dir ${CMAKE_SOURCE_DIR}/src/pnc_map)
 set(Show_Result_Dir ${CMAKE_SOURCE_DIR}/src/show_result)
 
 #三方库
-set(EIGEN3_INCLUDE_DIR "e:/vscode_new/eigen-3.4.0/eigen-3.4.0")
+# set(EIGEN3_INCLUDE_DIR "e:/vscode_new/eigen-3.4.0/eigen-3.4.0")#绝对路径
+set(EIGEN3_INCLUDE_DIR ${CMAKE_SOURCE_DIR}/third_party/eigen-3.4.0)#相对路径
 #将 EIGEN3_INCLUDE_DIR 路径下的 cmake 子目录路径添加到 CMAKE_MODULE_PATH 变量中。
 list(APPEND CMAKE_MODULE_PATH "${EIGEN3_INCLUDE_DIR}/cmake")
 #输出当前 CMAKE_MODULE_PATH 的值到控制台
@@ -28,7 +29,7 @@ message("CMAKE_MODULE_PATH=${CMAKE_MODULE_PATH}")
 find_package(Eigen3 3.4 REQUIRED)
 
 if(TARGET Eigen3::Eigen)
-message(STATUS "*******Eigen3 3.4 found in ${EIGEN3_INCLUDE_DIR}******")
+    message(STATUS "*******Eigen3 3.4 found in ${EIGEN3_INCLUDE_DIR}******")
 endif()
 
 #添加子目录
